@@ -38,3 +38,8 @@ async def add_comment(comment: Comment):
 @app.get("/api/comments")
 async def list_comments():
     return crud.get_comments()
+
+# 健康檢查 API
+@app.get("/health")
+def health_check():
+    return {"status": "online", "message": "Server is awake!"}
