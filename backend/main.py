@@ -41,5 +41,6 @@ async def list_comments():
 
 # 健康檢查 API
 @app.get("/health")
+@app.head("/health")
 def health_check():
     return {"status": "online", "message": "Server is awake!"}
